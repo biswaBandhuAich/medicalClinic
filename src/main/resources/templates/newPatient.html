@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:include="/header">
+    <meta charset="UTF-8">
+    <link href="../static/css/style.css" rel="stylesheet" th:href="@{/css/style.css}">
+    <title>Title</title>
+</head>
+<body>
+<form class="col-md-12" method="post" th:action="@{/registration}" th:object="${user}">
+    <input class="form-control" th:field="*{id}" type="hidden"/>
+    <div class="form-group col-md-4 m-md-3">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="firstname">First Name:</label>
+            </div>
+            <input class="form-control" id="firstname" th:field="*{firstName}" type="text"/>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="lastname">Last Name:</label>
+            </div>
+            <input class="form-control" id="lastname" th:field="*{lastName}" type="text"/>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="email">Email : </label>
+            </div>
+            <input class="form-control" id="email" th:field="*{email}" type="email"/>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="password">Password : </label>
+            </div>
+            <input class="form-control" id="password" th:field="*{password}" type="password"/>
+        </div>
+    </div>
+    <input class="arrow-button" name="Create" type="submit">
+</form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:include="/header">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" th:action="@{/bookAppointment}">
+    First Name : <input type="text" th:value="${user.getFirstName()}" name="firstName" id="firstName" readonly="true">
+    <input type="hidden" th:value="${user.getEmail()}" name="email" id="email" readonly="true">
+    Last Name : <input type="text" th:value="${user.getLastName()}" name="lastName" id="lastName" readonly="true">
+    Doctors : <select name="doctor" id="doctor">
+    <option th:each="doctor:${doctors}" th:value="${doctor.getName()}" th:text="${doctor.name}"></option>
+</select>
+    <input type="submit" value="Go On">
+</form>
+</body>
+</html>

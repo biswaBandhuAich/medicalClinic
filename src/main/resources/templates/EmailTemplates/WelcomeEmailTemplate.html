@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Message from ThymeLeaf</title>
+</head>
+<body>
+<div>
+    <img src="https://i0.wp.com/keyholesoftware.com/wp-content/uploads/Spring-Boot.png?fit=700%2C400&ssl=1"/>
+</div>
+<h1>This email was sent to:<span th:text="${sentTo}"></span> from <span th:text="${sender}"></span></h1>
+</body>
+</html>

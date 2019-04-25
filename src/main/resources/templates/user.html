@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:include="/header">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Welcome User!!
+<div>
+<button>Appointment History</button>
+<button>New Appointment</button>
+    <a th:href="@{appointment}">Book Appointment</a>
+    <a th:href="@{AvailableDoctors}">Check Available Doctors</a>
+    <a th:href="@{checkAllAppointments}">Check All Appointments</a>
+</body>
+</html>

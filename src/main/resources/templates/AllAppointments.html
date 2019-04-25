@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:include="/header">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:if="${apointments!=null and !apointments.isEmpty()}">
+    All appointments
+    <table border="10px">
+        <tr>
+            <td>Name</td>
+            <td>Qualification</td>
+            <td>Speciality</td>
+        </tr>
+
+        <tr th:each="appointment: ${apointments}">
+            <td th:text="${appointment.getUser().firstName}"/>
+            <td th:text="${appointment.getDoctor().name}"/>
+        </tr>
+
+
+    </table>
+</div >
+<div th:if="${apointments==null and apointments.isEmpty()}">
+    No Appointments Today!!
+</div>
+</body>
+</html>
